@@ -1,0 +1,68 @@
+---
+title: "lingtypology news and Gabmap"
+author: "G. Moroz"
+date: "2018/03/20, link to presentation: https://goo.gl/BSE6YK"
+output:
+  slidy_presentation:
+    df_print: paged
+    font-import: https://fonts.googleapis.com/css?family=Fanwood+Text
+    font-family: 'Fanwood Text'
+    font_adjustment: +2
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = FALSE,
+                      message=FALSE,
+                      warning= FALSE,
+                      fig.width=8.5,
+                      fig.height=5)
+library(lingtypology)
+```
+
+## lingtypology news
+
+* downloads: 11k
+* everything on [the web-site](https://ropensci.github.io/lingtypology/)
+* `editmap()`
+* OpenStreetMap data
+* `atlas.database()`
+
+## `mapedit::editMap()`
+
+![](https://raw.githubusercontent.com/ropensci/lingtypology/master/docs/use_mapedit.gif)
+
+## OpenStreetMap 
+
+* [how to use OSM for geting data](https://ropensci.github.io/lingtypology/lingtypology_dplyr.html#3_get_data_from_openstreetmap_with_overpass)
+
+## `atlas.database()`
+
+* If you have a table...
+```{r, echo=FALSE}
+df <- wals.feature(c("1a", "20a"))
+head(df)
+```
+* ... it is possible to create [an atlas](https://agricolamz.github.io/lingtypology_atlas_example/index.html):
+```{r, eval = FALSE}
+atlas.database(languages = df$language,
+               features = df[,c(4:5)],
+               latitude = df$latitude,
+               longitude = df$longitude,
+               atlas_name = "Some WALS features",
+               author = "Author Name")
+```
+
+
+
+## Gabmap
+
+* [gabmap](http://www.gabmap.nl/)
+* Nerbonne, J., Colen, R., Gooskens, C., Kleiweg, P., Leinonen, T. (2011) Gabmap - a web application for dialectology
+* Leinonen, T., Çöltekin, Ç., Nerbonne, J. (2016) Using Gabmap
+
+## Thank you!
+
+G. Moroz (agricolamz@gmail.com)
+
+Link to this presentation: [https://goo.gl/BSE6YK](https://goo.gl/BSE6YK)
