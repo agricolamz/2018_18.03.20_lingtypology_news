@@ -1,7 +1,7 @@
 ---
 title: "lingtypology news and Gabmap"
 author: "G. Moroz"
-date: "2018/03/20, link to presentation: https://goo.gl/BSE6YK"
+date: "2018/03/20, link to presentation: https://goo.gl/csmi7o"
 output:
   slidy_presentation:
     df_print: paged
@@ -65,4 +65,4 @@ atlas.database(languages = df$language,
 
 G. Moroz (agricolamz@gmail.com)
 
-Link to this presentation: [https://goo.gl/BSE6YK](https://goo.gl/BSE6YK)
+Link to this presentation: [https://goo.gl/csmi7o](https://goo.gl/csmi7o)
